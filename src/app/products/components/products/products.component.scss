@@ -1,0 +1,73 @@
+@import '../../../base';
+
+.background {
+  position: absolute;
+  z-index: 1;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../assets/img/home-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.frontground {
+  position: absolute;
+  z-index: 2;
+  top: 0; 
+  left: 0;
+  width: 100%;
+
+  // loading & no products
+  .products__status {
+    height: 84vh;
+    background-color: white;
+
+    .row {
+      height: 100%;
+    }
+  
+    .status__message {
+      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  .products-container {
+    padding: 30px;
+    background-color: white;
+
+    .search-tab-container {
+      margin-top: 10px; // +30px padding from products-container = 40px
+      margin-bottom: 40px;
+
+      input {
+        display: inline-block;
+        width: 15%;
+        height: 30px;
+        padding-left: 40px;
+        font-size: 1rem;
+        font-family: $font-1;
+        border: 2px solid $primary-color;
+        border-radius: 50px;
+        background: url('../../../../assets/img/pc-lupa.png') no-repeat scroll 10px 8px;
+
+        &::placeholder {
+        }
+      
+        &:focus {
+          outline: none;
+          border: 2px solid $dark-primary-color;
+          background: url('../../../../assets/img/dpc-lupa.png') no-repeat scroll 10px 8px;
+        }
+      }
+
+      .search-tab__icon {
+        height: 7.5hv;
+        border: 2px solid $dark-primary-color;
+        border-left: 2px solid white;
+      }
+    }
+  }
+}

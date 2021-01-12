@@ -1,0 +1,14 @@
+@import "../../../base";
+
+.footer-container {
+  padding: 10px;
+  border-top: 2px solid rgba(white, 0.6);
+  background-color: $dark-primary-color;
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}

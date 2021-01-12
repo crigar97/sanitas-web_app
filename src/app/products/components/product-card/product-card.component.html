@@ -1,0 +1,36 @@
+<div class="product-card-container">
+
+  <a [routerLink]="['/products', product.id]">
+    <div class="row">
+    
+      <div class="col-xs-12 start-xs" style="padding: 0;">
+        <div class="box">
+          <div class="row">
+            <div class="col-xs center-xs">
+              <div class="box">
+                <img class="product-card__img" [src]="product.img" alt="imagen de producto">
+              </div>
+            </div>
+          </div>
+          <h1 class="product-card__title">{{ product.title }}</h1>
+          <p class="product-card__description">{{ product.description | slice:0:35 }}...</p>
+    
+          <div class="row middle-xs between-xs">
+    
+            <div class="col-xs-auto" style="padding: 0;">
+              <div class="box">
+                <span class="product-card__price">{{ product.price | currency:'$' }} MXN</span>
+              </div>
+            </div>
+    
+            <div class="col-xs-auto">
+              <div class="box">
+                <img class="product-card__watch-icon" src="../../../../assets/img/ojo.png" alt="icono ver producto">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

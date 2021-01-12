@@ -1,0 +1,17 @@
+<div class="row middle-xs between-xs">
+
+  <div class="col-md-4" style="padding: 0;">
+    <a routerLink="/home" class="header__logo"><img src="../../../../assets/img/logo_transparente.png" alt="logotipo"></a>
+  </div>
+
+  <div class="col-md-7 end-xs" style="padding: 0;">
+    <nav class="header__nav">
+      <a routerLink="/home" class="header__link" routerLinkActive="active-link">Inicio</a>
+      <a routerLink="/products" class="header__link" routerLinkActive="active-link">Productos</a>
+      <a routerLink="/cart" class="header__cart" data="Carrito">
+        <img src="../../../../assets/img/carrito-de-compras.png" title="Carrito" alt="ícono de carrito de compras">
+      </a>
+      <span class="cart__count">{{ totalUnits }}</span>
+    </nav>
+  </div>
+</div>

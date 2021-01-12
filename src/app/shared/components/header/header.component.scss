@@ -1,0 +1,50 @@
+@import './../../../base';
+
+:host { //header
+  height: 15vh;
+  border-bottom: 1px solid rgba(white, 0.6);
+
+  .row {
+    height: 100%;
+  }
+
+  .header__logo {
+    margin-left: 30px;
+    text-decoration: none;
+  }
+
+  .header__nav {
+    display: inline-block;
+    margin-right: 30px;
+  
+    .header__link {
+      margin-left: 40px;
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 1.2rem;
+      font-weight: 700;
+
+      &:hover {
+        color: $dark-primary-color;
+      }
+    }
+
+    .header__cart {
+      margin-left: 40px;
+      text-decoration: none;
+
+    }
+
+    .cart__count {
+      color: black;
+      font-weight: bold;
+      padding: 2px 4px;
+      background: white;
+      border-radius: 50px;
+    }
+
+    .active-link {
+      color: $dark-primary-color;
+    }
+  }
+}

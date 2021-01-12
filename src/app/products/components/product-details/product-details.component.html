@@ -1,0 +1,75 @@
+<div class="background"></div>
+
+<div class="frontground">
+  <header></header>
+
+  <!-- loading -->
+  <div class="product-details__status" *ngIf="loading">
+    <div class="row middle-xs">
+      <div class="col-xs-12 center-xs">
+        <h1 class="status__message">{{ statusMessage }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- product details -->
+  <div class="product-details-container" *ngIf="!loading && !error">
+
+    <div class="row top-xs">
+
+      <!-- go back link -->
+      <div class="col-xs-12 start-xs col-md-2" style="padding: 0;">
+        <a routerLink="/products" class="go-back__link">
+          <div class="row middle-xs">
+            <div class="col-xs-auto">
+              <img class="link__icon" src="../../../../assets/img/dpc-flecha.png" alt="icono de flecha">
+            </div>
+            <div class="col-xs-auto">
+              <span class="link__text">Volver</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-xs-12 center-xs col-sm-4 end-sm" style="padding: 0;">
+        <div class="box">
+          <img class="product-details__img" [src]="product.img" alt="imagen de producto">
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-5" style="padding: 0;">
+        <div class="box">
+          <h1 class="product-details__title">{{ product.title }}</h1>
+          <p class="product-details__description">{{ product.description }}</p>
+          <span class="product-details__price">{{ product.price | currency:"$" }} MXN</span>
+          <div class="row middle-xs" style="margin-top: 20px;">
+            <div class="col-xs-auto">
+              <div class="box">
+                <label for="product-details__quantity-input" class="product-details__quantity">
+                  Cantidad :
+                </label>
+              </div>
+            </div>
+            <div class="col-xs-auto">
+              <div class="box">
+                <input type="number" value="1" id="product-details__quantity-input">
+              </div>
+            </div>
+          </div>
+          <button class="product-details__pay">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- error -->
+  <div class="product-details__status" *ngIf="error">
+    <div class="row middle-xs">
+      <div class="col-xs-12 center-xs">
+        <h1 class="status__message">{{ statusMessage }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+</div>
